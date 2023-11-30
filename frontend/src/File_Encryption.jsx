@@ -39,6 +39,7 @@ const File_Encrypt = () => {
     
     if (selectedKeySize && plainText && key){
 
+    
       if (selectedKeySize === "128bits") {
         key_size = 128;
         // if (key.length !== 16) {
@@ -71,7 +72,8 @@ const File_Encrypt = () => {
       .then((response) => {
         setEncryptedText(response.data.encrypted_data);
       }, (error) => {
-        console.log(error);
+        console.log("This is error code: ", error.code);
+        alert(error.code)
       });
     }
     else {
@@ -130,6 +132,7 @@ const File_Encrypt = () => {
 
   async function handleDownload() {
       savePDF();
+      navigate('/feedback')
   }
 
   async function handleDecryptClick() {
@@ -165,7 +168,8 @@ const File_Encrypt = () => {
         setPlainText(response.data.decrypted_data);
         navigator.clipboard.writeText(response.data.decrypted_data);
       }, (error) => {
-        console.log(error);
+        console.log("This is error code: ", error.code);
+        alert(error.code)
       });
     }
     else {

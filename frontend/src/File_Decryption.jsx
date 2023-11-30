@@ -44,7 +44,8 @@ const File_Decrypt = () => {
       .then((response) => {
         setEncryptedText(response.data.hashed_mac);
       }, (error) => {
-        console.log(error);
+        console.log("This is error code: ", error.code);
+        alert(error.code)
       });
     }
     else {
@@ -87,6 +88,7 @@ const File_Decrypt = () => {
 
   async function handleDownload() {
       savePDF();
+      navigate('/feedback')
   }
 
   async function handleDecryptClick() {
@@ -97,6 +99,7 @@ const File_Decrypt = () => {
 
       var key_size = 0;
       if (selectedKeySize === "128bits") {
+       
         key_size = 128;
         // if (key.length !== 16) {
         //   alert("Key size does not match!");
@@ -127,7 +130,8 @@ const File_Decrypt = () => {
         setPlainText(response.data.decrypted_data);
         console.log(response.data.decrypted_data);
       }, (error) => {
-        console.log(error);
+        console.log("This is error code: ", error.code);
+        alert(error.code)
       });
     }
     else {

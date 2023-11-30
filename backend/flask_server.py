@@ -13,10 +13,13 @@ def aes_encryption():
     key = data.get('key')  
     plain_text = data.get('plain_text')
     block_size = data.get('block_size')
-    
+    print("Len of key", len(key)*8)
     if len(key)*8 < block_size:
         while len(key)*8 < block_size:
             key += 'x'
+    elif len(key) * 8 > block_size:
+        print('greater than block size')
+        raise ValueError("Sallam Payn")
     
     print("from client: " , key, plain_text, block_size)
     

@@ -47,7 +47,7 @@ const Home = () => {
         
         <button className="bg-gray-800 hover:bg-green-700 mt-10 text-2xl transform transition-all duration-300 w-50 z-10 hover:scale-90 px-8 py-2 rounded-md" 
         onClick={handleEncryptClick}
-        > Encryption <br/>
+        > Text Encryption <br/>
           <p className="text-7xl"></p>
         </button>
 

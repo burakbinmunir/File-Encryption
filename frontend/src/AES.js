@@ -35,7 +35,7 @@ const Encrypt = () => {
     var key_size = 0;
     
     if (selectedKeySize && plainText && key){
-
+      
       if (selectedKeySize === "128bits") {
         key_size = 128;
         // if (key.length !== 16) {
@@ -69,7 +69,8 @@ const Encrypt = () => {
         setEncryptedText(response.data.encrypted_data);
         navigator.clipboard.writeText(response.data.encrypted_data);  
       }, (error) => {
-        console.log(error);
+        console.log("This is error code: ", error.code);
+        alert(error.code)
       });
     }
     else {
@@ -129,9 +130,9 @@ const Encrypt = () => {
       })
       .then((response) => {
         setPlainText(response.data.decrypted_data);
-        navigator.clipboard.writeText(response.data.decrypted_data);
       }, (error) => {
-        console.log(error);
+        console.log("This is error code: ", error.code);
+        alert(error.code)
       });
     }
     else {
@@ -201,7 +202,6 @@ const Encrypt = () => {
         <div className="bg-opacity-30 h-full w-[120%] pl-0 ">
           <div className="pl-[2%] flex flex-row justify-between">
             <div className="flex flex-col flex-wrap wrap" style={{ wordWrap: 'break-word' }}>
-            <input type="file" onChange={(e)=>onFileChange(e)} />
 
               <textarea
                 type="text"

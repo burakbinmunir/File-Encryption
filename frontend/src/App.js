@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 
 import Home from './Home';
 import Encrypt from './AES';
-import Decrypt from './HMAC';
+import Hmac from './HMAC';
 import Feedback from './Feedback';
 import Feedback2 from './Feedback2';
 import File_Encrypt from './File_Encryption'
@@ -20,7 +20,7 @@ const App = () => {
         
         <Route path="/AES" element={<Encrypt />}/>
 
-        <Route path="/HMAC" element={<Decrypt />}/>
+        <Route path="/HMAC" element={<Hmac />}/>
  
         <Route path="/feedback" element={<Feedback />}/>
 
