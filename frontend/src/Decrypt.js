@@ -47,7 +47,7 @@ const Decrypt = () => {
               <input
                 type="text"
                 placeholder="Enter encrypted text"
-                className="w-[32vw] h-[82vh] overflow-wrap-break-word w-110 ml-12 border border-black bg-gray-700 opacity-200 p-2 rounded-md text-black bg-white bg-opacity-70 m-5 justify-start"
+                className="w-[30vw] h-[82vh] overflow-wrap-break-word w-110 ml-12 border border-black bg-gray-700 opacity-200 p-2 rounded-md text-black bg-white bg-opacity-70 m-5 justify-start"
               />
               <button className="bg-gray-800 hover:bg-green-700 text-white py-1 px-1 ml-16 mr-14 w-15 rounded-md">
                 Decrypt Text <br />
@@ -138,7 +138,7 @@ const Decrypt = () => {
               <input
                type="text"
                placeholder="Get decrypted text"
-               className="w-[32vw] h-[82vh] border border-black bg-gray-700 opacity-200 p-3 rounded-md text-black bg-white bg-opacity-70 m-5 justify-end"
+               className="w-[30vw] h-[82vh] border border-black bg-gray-700 opacity-200 p-3 rounded-md text-black bg-white bg-opacity-70 m-5 justify-end"
               />
               <button className="bg-gray-800 hover:bg-green-700 text-white py-1 px-1 ml-16 mr-14 w-15 rounded-md"
                onClick={handleFeedback}

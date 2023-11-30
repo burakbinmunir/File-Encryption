@@ -276,7 +276,7 @@ const File_Encrypt = () => {
               <textarea
                 type="text"
                 placeholder="Enter plain text"
-                className="w-[32vw] h-[62vh] w-110 ml-12 border border-black bg-gray-700 opacity-200 p-2 rounded-md text-black bg-white bg-opacity-70 m-5 justify-start"
+                className="w-[28vw] h-[62vh] w-110 ml-12 border border-black bg-gray-700 opacity-200 p-2 rounded-md text-black bg-white bg-opacity-70 m-5 justify-start"
                 onChange={(e)=>{ setPlainText(e.target.value)}}
                 value={plainText}
                 style={{ resize: 'none', overflowWrap: 'break-word' }}
@@ -284,7 +284,7 @@ const File_Encrypt = () => {
               <textarea
                 type="text"
                 placeholder="Enter Key"
-                className="w-[32vw] h-[16vh] overflow-wrap-break-word w-110 ml-12 border border-black bg-gray-700 opacity-200 p-2 rounded-md text-black bg-white bg-opacity-70 m-5 justify-start"
+                className="w-[28vw] h-[16vh] overflow-wrap-break-word w-110 ml-12 border border-black bg-gray-700 opacity-200 p-2 rounded-md text-black bg-white bg-opacity-70 m-5 justify-start"
                 onChange={(e)=>{ setKey(e.target.value)}}
               />
               <button onClick={()=>handleEncryptClick()} className="bg-gray-800 hover:bg-green-700 text-white py-1 px-1 ml-16 mr-14 w-15 rounded-md">
@@ -293,7 +293,7 @@ const File_Encrypt = () => {
               </button>
             </div>
 
-            <div className="w-[30vw] h-[82vh] flex flex-col p-3 rounded-md text-black bg-opacity-70 m-5 p-8 justify-center items-center">
+            <div className="w-[28vw] h-[82vh] flex flex-col p-3 rounded-md text-black bg-opacity-70 m-5 p-8 justify-center items-center">
 
                 <input    className="bg-gray-700 hover:bg-green-800 text-white font-bold py-2 px-4 rounded-md relative" type="file" onChange={(e)=>onFileChange(e)} />
               <div className="relative mt-12">
