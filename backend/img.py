@@ -738,28 +738,28 @@ def decrypt_file (encrypted_text, key, block_size):
 # print(d)
 
 
-# image = Image.open('test_03.png')  # Replace 'path/to/your/image.jpg' with your image file path
+image = Image.open('test_03.png')  # Replace 'path/to/your/image.jpg' with your image file path
 block_size = 128
 key = 'abcdefghijklmnop'
 
-# image = image.resize((100, 100))
-# # Convert the image to grayscale
-# image_gray = image.convert('L')
+image = image.resize((100, 100))
+# Convert the image to grayscale
+image_gray = image.convert('L')
 
-# # Convert the image to a 2D array (numpy array)
-# image_array = np.array(image_gray)
-# print(image_array.shape)
+# Convert the image to a 2D array (numpy array)
+image_array = np.array(image_gray)
+print(image_array.shape)
 
-# encrypted_image_matrix = np.empty_like(image_array, dtype='object')
+encrypted_image_matrix = np.empty_like(image_array, dtype='object')
 
-# for i in range(len(image_array)):
-#     for j in range(len(image_array[i])):
-#         e = encrypt_file(str(image_array[i][j]), key, block_size)
-#         encrypted_image_matrix[i][j] = e
+for i in range(len(image_array)):
+    for j in range(len(image_array[i])):
+        e = encrypt_file(str(image_array[i][j]), key, block_size)
+        encrypted_image_matrix[i][j] = e
 
-# df = pd.DataFrame(encrypted_image_matrix)
+df = pd.DataFrame(encrypted_image_matrix)
 
-# export_csv = df.to_csv (r'encrypted_image_matrix.csv', index = None, header=True) #Don't forget to add '.csv' at the end of the path
+export_csv = df.to_csv (r'encrypted_image_matrix.csv', index = None, header=True) #Don't forget to add '.csv' at the end of the path
 
 
 # load encrypted image matrix from csv
